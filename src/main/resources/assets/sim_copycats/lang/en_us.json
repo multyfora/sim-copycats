@@ -1,0 +1,25 @@
+{
+  "itemGroup.sim_copycats": "Aeronautics: Simulated Copycats",
+  "block.sim_copycats.example_block": "Example Block",
+  "item.sim_copycats.example_item": "Example Item",
+  "block.sim_copycats.levitite_copycat": "Levitite Copycat",
+  "block.sim_copycats.fragile_copycat": "Fragile Copycat",
+  "block.sim_copycats.super_light_copycat": "Super Light Copycat",
+  "block.sim_copycats.light_copycat": "Light Copycat",
+  "block.sim_copycats.normal_copycat": "Normal Copycat",
+  "block.sim_copycats.heavy_copycat": "Heavy Copycat",
+  "block.sim_copycats.super_heavy_copycat": "Super Heavy Copycat",
+  "block.sim_copycats.absurdly_heavy_copycat": "Absurdly Heavy Copycat",
+  "block.sim_copycats.slippery_copycat": "Slippery Copycat",
+  "block.sim_copycats.sticky_copycat": "Sticky Copycat",
+  "block.sim_copycats.bouncy_copycat": "Bouncy Copycat",
+  "block.sim_copycats.weightless_copycat": "Weightless Copycat",
+
+  "sim_copycats.configuration.title": "Simulated Copycats Configs",
+  "sim_copycats.configuration.section.sim_copycats.common.toml": "Simulated Copycats Configs",
+  "sim_copycats.configuration.section.sim_copycats.common.toml.title": "Simulated Copycats Configs",
+  "sim_copycats.configuration.items": "Item List",
+  "sim_copycats.configuration.logDirtBlock": "Log Dirt Block",
+  "sim_copycats.configuration.magicNumberIntroduction": "Magic Number Text",
+  "sim_copycats.configuration.magicNumber": "Magic Number"
+}

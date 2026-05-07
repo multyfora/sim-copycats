@@ -1,0 +1,6 @@
+{
+  "selector": "#sim_copycats:sticky",
+  "properties": {
+    "sable:friction": 0.8
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "selector": "#sim_copycats:slippery",
+  "properties": {
+    "sable:friction": 0.0
+  }
+}

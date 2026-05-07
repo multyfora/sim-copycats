@@ -1,0 +1,6 @@
+{
+  "selector": "#sim_copycats:heavy",
+  "properties": {
+    "sable:mass": 2.0
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "create:brass_ingot"
+  },
+  "result": {
+    "id": "sim_copycats:levitite_copycat",
+    "count": 1
+  }
+}

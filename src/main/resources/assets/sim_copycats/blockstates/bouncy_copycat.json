@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "sim_copycats:block/copycat_base"
+    }
+  }
+}

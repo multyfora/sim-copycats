@@ -1,0 +1,6 @@
+{
+  "selector": "#sim_copycats:levitite",
+  "properties": {
+    "sable:floating_material": "sim_copycats:levitite"
+  }
+}
