@@ -103,10 +103,6 @@ dependencies {
     runtimeOnly("dev.engine-room.flywheel:flywheel-neoforge-${minecraft_version}:${flywheel_version}")
     implementation("com.tterrag.registrate:Registrate:${registrate_version}")
 
-    implementation("foundry.veil:veil-neoforge-${minecraft_version}:${veil_version}") {
-        exclude group: "maven.modrinth"
-    }
-
     implementation("dev.ryanhcode.sable:sable-neoforge-${minecraft_version}:${sable_version}")
     implementation("dev.ryanhcode.sable-companion:sable-companion-common-${minecraft_version}:${sable_companion_version}")
 
