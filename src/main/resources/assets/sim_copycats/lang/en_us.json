@@ -14,6 +14,8 @@
   "block.sim_copycats.sticky_copycat": "Sticky Copycat",
   "block.sim_copycats.bouncy_copycat": "Bouncy Copycat",
   "block.sim_copycats.weightless_copycat": "Weightless Copycat",
+  "advancement.sim_copycats.levitite_copycat.title": "Now available in any shape and form!",
+  "advancement.sim_copycats.levitite_copycat.desc": "Craft a Levitite Copycat",
 
   "sim_copycats.configuration.title": "Simulated Copycats Configs",
   "sim_copycats.configuration.section.sim_copycats.common.toml": "Simulated Copycats Configs",

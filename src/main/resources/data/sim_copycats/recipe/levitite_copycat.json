@@ -1,10 +1,19 @@
 {
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "create:brass_ingot"
-  },
-  "result": {
-    "id": "sim_copycats:levitite_copycat",
-    "count": 1
-  }
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "tag": "c:ingots/zinc"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "aeronautics:levitite_blend"
+    }
+  ],
+  "results": [
+    {
+      "id": "sim_copycats:levitite_copycat"
+    }
+  ]
 }

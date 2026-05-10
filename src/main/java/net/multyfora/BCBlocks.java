@@ -144,6 +144,7 @@ public class BCBlocks {
             () -> {
                 SlipperyCopycat block = new SlipperyCopycat(BlockBehaviour.Properties.of()
                         .strength(1.0f, 2.0f)
+                        .friction(0.098F)
                         .sound(SoundType.GLASS)
                         .noOcclusion());
                 BCBlockEntityTypes.addCopycatBlock(() -> block);
@@ -158,6 +159,7 @@ public class BCBlocks {
             () -> {
                 StickyCopycat block = new StickyCopycat(BlockBehaviour.Properties.of()
                         .strength(1.0f, 2.0f)
+                        .friction(0.8F)
                         .sound(SoundType.HONEY_BLOCK)
                         .noOcclusion());
                 BCBlockEntityTypes.addCopycatBlock(() -> block);

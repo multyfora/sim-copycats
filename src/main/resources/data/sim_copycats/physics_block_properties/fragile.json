@@ -1,0 +1,6 @@
+{
+  "selector": "#sim_copycats:fragile",
+  "properties": {
+    "sable:fragile": true
+  }
+}
