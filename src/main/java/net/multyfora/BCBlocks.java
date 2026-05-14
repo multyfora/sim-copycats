@@ -122,7 +122,6 @@ public class BCBlocks {
     public static final DeferredBlock<SlipperyCopycat> SLIPPERY_COPYCAT = REGISTER.register("slippery_copycat",
             () -> new SlipperyCopycat(BlockBehaviour.Properties.of()
                     .strength(1.0f, 2.0f)
-                    .friction(0.098F)
                     .sound(SoundType.GLASS)
                     .noOcclusion()));
 

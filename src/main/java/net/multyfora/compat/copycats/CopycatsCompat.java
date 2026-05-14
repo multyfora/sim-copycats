@@ -127,7 +127,6 @@ public class CopycatsCompat {
                 CCSlipperySlab::new, CCSlipperyStairs::new,
                 BlockBehaviour.Properties.of()
                         .strength(1.0f, 2.0f)
-                        .friction(0.098F)
                         .sound(SoundType.GLASS)
                         .noOcclusion(),
                 null);
