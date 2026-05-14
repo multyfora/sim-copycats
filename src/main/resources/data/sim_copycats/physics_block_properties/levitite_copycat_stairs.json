@@ -1,5 +1,5 @@
 {
-  "selector": "#sim_copycats:levitite",
+  "selector": "sim_copycats:levitite_copycat_stairs",
   "properties": {
     "sable:floating_material": "sim_copycats:levitite"
   }

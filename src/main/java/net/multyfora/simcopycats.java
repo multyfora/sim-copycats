@@ -54,17 +54,15 @@ public class simcopycats {
                 output.accept(BCBlocks.STICKY_COPYCAT_ITEM.get());
                 output.accept(BCBlocks.BOUNCY_COPYCAT_ITEM.get());
                 output.accept(BCBlocks.WEIGHTLESS_COPYCAT_ITEM.get());
-                if (CopycatsCompat.isLoaded()) {
-                    for (var block : CopycatsCompat.getCopycatBlocks()) {
-                        output.accept(block.get().asItem());
-                    }
+                for (var block : CopycatsCompat.getCopycatBlocks()) {
+                    output.accept(block.get().asItem());
                 }
             }).build());
 
     public simcopycats(IEventBus modEventBus, ModContainer modContainer) {
         BCBlocks.REGISTER.register(modEventBus);
         BCBlocks.ITEMS_REGISTER.register(modEventBus);
-        BCBlockEntityTypes.REGISTER.register(modEventBus);
+        BCBlocks.registerAllFullBlockBEs();
         BCBlocks.initCopycatClientRegistration();
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);

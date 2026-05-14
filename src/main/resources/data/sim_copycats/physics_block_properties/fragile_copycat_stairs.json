@@ -1,0 +1,6 @@
+{
+  "selector": "sim_copycats:fragile_copycat_stairs",
+  "properties": {
+    "sable:fragile": true
+  }
+}

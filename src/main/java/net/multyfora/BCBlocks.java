@@ -26,16 +26,12 @@ public class BCBlocks {
     // ======================== LEVITITE ========================
 
     public static final DeferredBlock<LevititeCopycat> LEVITITE_COPYCAT = REGISTER.register("levitite_copycat",
-            () -> {
-                LevititeCopycat block = new LevititeCopycat(BlockBehaviour.Properties.of()
-                        .strength(7.0f, 20.0f)
-                        .sound(SoundType.AMETHYST)
-                        .noOcclusion()
-                        .requiresCorrectToolForDrops()
-                        .lightLevel(state -> 10));
-                BCBlockEntityTypes.addCopycatBlock(() -> block);
-                return block;
-            });
+            () -> new LevititeCopycat(BlockBehaviour.Properties.of()
+                    .strength(7.0f, 20.0f)
+                    .sound(SoundType.AMETHYST)
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()
+                    .lightLevel(state -> 10)));
 
     public static final DeferredItem<BlockItem> LEVITITE_COPYCAT_ITEM = ITEMS_REGISTER.register("levitite_copycat",
             () -> new BlockItem(LEVITITE_COPYCAT.get(), new Item.Properties()
@@ -44,14 +40,10 @@ public class BCBlocks {
     // ======================== FRAGILE ========================
 
     public static final DeferredBlock<FragileCopycat> FRAGILE_COPYCAT = REGISTER.register("fragile_copycat",
-            () -> {
-                FragileCopycat block = new FragileCopycat(BlockBehaviour.Properties.of()
-                        .strength(0.5f, 1.0f)
-                        .sound(SoundType.CROP)
-                        .noOcclusion());
-                BCBlockEntityTypes.addCopycatBlock(() -> block);
-                return block;
-            });
+            () -> new FragileCopycat(BlockBehaviour.Properties.of()
+                    .strength(0.5f, 1.0f)
+                    .sound(SoundType.CROP)
+                    .noOcclusion()));
 
     public static final DeferredItem<BlockItem> FRAGILE_COPYCAT_ITEM = ITEMS_REGISTER.register("fragile_copycat",
             () -> new BlockItem(FRAGILE_COPYCAT.get(), new Item.Properties()));
@@ -59,14 +51,10 @@ public class BCBlocks {
     // ======================== SUPER LIGHT ========================
 
     public static final DeferredBlock<SuperLightCopycat> SUPER_LIGHT_COPYCAT = REGISTER.register("super_light_copycat",
-            () -> {
-                SuperLightCopycat block = new SuperLightCopycat(BlockBehaviour.Properties.of()
-                        .strength(1.5f, 3.0f)
-                        .sound(SoundType.WOOL)
-                        .noOcclusion());
-                BCBlockEntityTypes.addCopycatBlock(() -> block);
-                return block;
-            });
+            () -> new SuperLightCopycat(BlockBehaviour.Properties.of()
+                    .strength(1.5f, 3.0f)
+                    .sound(SoundType.WOOL)
+                    .noOcclusion()));
 
     public static final DeferredItem<BlockItem> SUPER_LIGHT_COPYCAT_ITEM = ITEMS_REGISTER.register("super_light_copycat",
             () -> new BlockItem(SUPER_LIGHT_COPYCAT.get(), new Item.Properties()));
@@ -74,14 +62,10 @@ public class BCBlocks {
     // ======================== LIGHT ========================
 
     public static final DeferredBlock<LightCopycat> LIGHT_COPYCAT = REGISTER.register("light_copycat",
-            () -> {
-                LightCopycat block = new LightCopycat(BlockBehaviour.Properties.of()
-                        .strength(1.5f, 3.0f)
-                        .sound(SoundType.WOOD)
-                        .noOcclusion());
-                BCBlockEntityTypes.addCopycatBlock(() -> block);
-                return block;
-            });
+            () -> new LightCopycat(BlockBehaviour.Properties.of()
+                    .strength(1.5f, 3.0f)
+                    .sound(SoundType.WOOD)
+                    .noOcclusion()));
 
     public static final DeferredItem<BlockItem> LIGHT_COPYCAT_ITEM = ITEMS_REGISTER.register("light_copycat",
             () -> new BlockItem(LIGHT_COPYCAT.get(), new Item.Properties()));
@@ -89,14 +73,10 @@ public class BCBlocks {
     // ======================== NORMAL ========================
 
     public static final DeferredBlock<NormalCopycat> NORMAL_COPYCAT = REGISTER.register("normal_copycat",
-            () -> {
-                NormalCopycat block = new NormalCopycat(BlockBehaviour.Properties.of()
-                        .strength(2.0f, 4.0f)
-                        .sound(SoundType.STONE)
-                        .noOcclusion());
-                BCBlockEntityTypes.addCopycatBlock(() -> block);
-                return block;
-            });
+            () -> new NormalCopycat(BlockBehaviour.Properties.of()
+                    .strength(2.0f, 4.0f)
+                    .sound(SoundType.STONE)
+                    .noOcclusion()));
 
     public static final DeferredItem<BlockItem> NORMAL_COPYCAT_ITEM = ITEMS_REGISTER.register("normal_copycat",
             () -> new BlockItem(NORMAL_COPYCAT.get(), new Item.Properties()));
@@ -104,15 +84,11 @@ public class BCBlocks {
     // ======================== HEAVY ========================
 
     public static final DeferredBlock<HeavyCopycat> HEAVY_COPYCAT = REGISTER.register("heavy_copycat",
-            () -> {
-                HeavyCopycat block = new HeavyCopycat(BlockBehaviour.Properties.of()
-                        .strength(3.0f, 6.0f)
-                        .sound(SoundType.STONE)
-                        .noOcclusion()
-                        .requiresCorrectToolForDrops());
-                BCBlockEntityTypes.addCopycatBlock(() -> block);
-                return block;
-            });
+            () -> new HeavyCopycat(BlockBehaviour.Properties.of()
+                    .strength(3.0f, 6.0f)
+                    .sound(SoundType.STONE)
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()));
 
     public static final DeferredItem<BlockItem> HEAVY_COPYCAT_ITEM = ITEMS_REGISTER.register("heavy_copycat",
             () -> new BlockItem(HEAVY_COPYCAT.get(), new Item.Properties()));
@@ -120,15 +96,11 @@ public class BCBlocks {
     // ======================== SUPER HEAVY ========================
 
     public static final DeferredBlock<SuperHeavyCopycat> SUPER_HEAVY_COPYCAT = REGISTER.register("super_heavy_copycat",
-            () -> {
-                SuperHeavyCopycat block = new SuperHeavyCopycat(BlockBehaviour.Properties.of()
-                        .strength(4.0f, 8.0f)
-                        .sound(SoundType.METAL)
-                        .noOcclusion()
-                        .requiresCorrectToolForDrops());
-                BCBlockEntityTypes.addCopycatBlock(() -> block);
-                return block;
-            });
+            () -> new SuperHeavyCopycat(BlockBehaviour.Properties.of()
+                    .strength(4.0f, 8.0f)
+                    .sound(SoundType.METAL)
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()));
 
     public static final DeferredItem<BlockItem> SUPER_HEAVY_COPYCAT_ITEM = ITEMS_REGISTER.register("super_heavy_copycat",
             () -> new BlockItem(SUPER_HEAVY_COPYCAT.get(), new Item.Properties()));
@@ -136,15 +108,11 @@ public class BCBlocks {
     // ======================== ABSURDLY HEAVY ========================
 
     public static final DeferredBlock<AbsurdlyHeavyCopycat> ABSURDLY_HEAVY_COPYCAT = REGISTER.register("absurdly_heavy_copycat",
-            () -> {
-                AbsurdlyHeavyCopycat block = new AbsurdlyHeavyCopycat(BlockBehaviour.Properties.of()
-                        .strength(5.0f, 10.0f)
-                        .sound(SoundType.METAL)
-                        .noOcclusion()
-                        .requiresCorrectToolForDrops());
-                BCBlockEntityTypes.addCopycatBlock(() -> block);
-                return block;
-            });
+            () -> new AbsurdlyHeavyCopycat(BlockBehaviour.Properties.of()
+                    .strength(5.0f, 10.0f)
+                    .sound(SoundType.METAL)
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()));
 
     public static final DeferredItem<BlockItem> ABSURDLY_HEAVY_COPYCAT_ITEM = ITEMS_REGISTER.register("absurdly_heavy_copycat",
             () -> new BlockItem(ABSURDLY_HEAVY_COPYCAT.get(), new Item.Properties()));
@@ -152,15 +120,11 @@ public class BCBlocks {
     // ======================== SLIPPERY ========================
 
     public static final DeferredBlock<SlipperyCopycat> SLIPPERY_COPYCAT = REGISTER.register("slippery_copycat",
-            () -> {
-                SlipperyCopycat block = new SlipperyCopycat(BlockBehaviour.Properties.of()
-                        .strength(1.0f, 2.0f)
-                        .friction(0.098F)
-                        .sound(SoundType.GLASS)
-                        .noOcclusion());
-                BCBlockEntityTypes.addCopycatBlock(() -> block);
-                return block;
-            });
+            () -> new SlipperyCopycat(BlockBehaviour.Properties.of()
+                    .strength(1.0f, 2.0f)
+                    .friction(0.098F)
+                    .sound(SoundType.GLASS)
+                    .noOcclusion()));
 
     public static final DeferredItem<BlockItem> SLIPPERY_COPYCAT_ITEM = ITEMS_REGISTER.register("slippery_copycat",
             () -> new BlockItem(SLIPPERY_COPYCAT.get(), new Item.Properties()));
@@ -168,15 +132,11 @@ public class BCBlocks {
     // ======================== STICKY ========================
 
     public static final DeferredBlock<StickyCopycat> STICKY_COPYCAT = REGISTER.register("sticky_copycat",
-            () -> {
-                StickyCopycat block = new StickyCopycat(BlockBehaviour.Properties.of()
-                        .strength(1.0f, 2.0f)
-                        .friction(0.8F)
-                        .sound(SoundType.HONEY_BLOCK)
-                        .noOcclusion());
-                BCBlockEntityTypes.addCopycatBlock(() -> block);
-                return block;
-            });
+            () -> new StickyCopycat(BlockBehaviour.Properties.of()
+                    .strength(1.0f, 2.0f)
+                    .friction(0.8F)
+                    .sound(SoundType.HONEY_BLOCK)
+                    .noOcclusion()));
 
     public static final DeferredItem<BlockItem> STICKY_COPYCAT_ITEM = ITEMS_REGISTER.register("sticky_copycat",
             () -> new BlockItem(STICKY_COPYCAT.get(), new Item.Properties()));
@@ -184,14 +144,10 @@ public class BCBlocks {
     // ======================== BOUNCY ========================
 
     public static final DeferredBlock<BouncyCopycat> BOUNCY_COPYCAT = REGISTER.register("bouncy_copycat",
-            () -> {
-                BouncyCopycat block = new BouncyCopycat(BlockBehaviour.Properties.of()
-                        .strength(1.0f, 2.0f)
-                        .sound(SoundType.SLIME_BLOCK)
-                        .noOcclusion());
-                BCBlockEntityTypes.addCopycatBlock(() -> block);
-                return block;
-            });
+            () -> new BouncyCopycat(BlockBehaviour.Properties.of()
+                    .strength(1.0f, 2.0f)
+                    .sound(SoundType.SLIME_BLOCK)
+                    .noOcclusion()));
 
     public static final DeferredItem<BlockItem> BOUNCY_COPYCAT_ITEM = ITEMS_REGISTER.register("bouncy_copycat",
             () -> new BlockItem(BOUNCY_COPYCAT.get(), new Item.Properties()));
@@ -199,14 +155,10 @@ public class BCBlocks {
     // ======================== WEIGHTLESS ========================
 
     public static final DeferredBlock<WeightlessCopycat> WEIGHTLESS_COPYCAT = REGISTER.register("weightless_copycat",
-            () -> {
-                WeightlessCopycat block = new WeightlessCopycat(BlockBehaviour.Properties.of()
-                        .strength(1.0f, 2.0f)
-                        .sound(SoundType.WOOL)
-                        .noOcclusion());
-                BCBlockEntityTypes.addCopycatBlock(() -> block);
-                return block;
-            });
+            () -> new WeightlessCopycat(BlockBehaviour.Properties.of()
+                    .strength(1.0f, 2.0f)
+                    .sound(SoundType.WOOL)
+                    .noOcclusion()));
 
     public static final DeferredItem<BlockItem> WEIGHTLESS_COPYCAT_ITEM = ITEMS_REGISTER.register("weightless_copycat",
             () -> new BlockItem(WEIGHTLESS_COPYCAT.get(), new Item.Properties()));
@@ -230,11 +182,24 @@ public class BCBlocks {
             BCClientSetup.registerCopycatBlock(copycat);
         }
 
-        if (CopycatsCompat.isLoaded()) {
-            CopycatsCompat.registerBlocks(REGISTER, ITEMS_REGISTER);
-            for (DeferredBlock<? extends Block> copycat : CopycatsCompat.getCopycatBlocks()) {
-                BCClientSetup.registerCopycatBlock(copycat);
-            }
+        CopycatsCompat.registerBlocks(REGISTER, ITEMS_REGISTER);
+        for (DeferredBlock<? extends Block> copycat : CopycatsCompat.getCopycatBlocks()) {
+            BCClientSetup.registerCopycatBlock(copycat);
         }
+    }
+
+    public static void registerAllFullBlockBEs() {
+        CopycatsCompat.registerFullBlock(LEVITITE_COPYCAT);
+        CopycatsCompat.registerFullBlock(FRAGILE_COPYCAT);
+        CopycatsCompat.registerFullBlock(SUPER_LIGHT_COPYCAT);
+        CopycatsCompat.registerFullBlock(LIGHT_COPYCAT);
+        CopycatsCompat.registerFullBlock(NORMAL_COPYCAT);
+        CopycatsCompat.registerFullBlock(HEAVY_COPYCAT);
+        CopycatsCompat.registerFullBlock(SUPER_HEAVY_COPYCAT);
+        CopycatsCompat.registerFullBlock(ABSURDLY_HEAVY_COPYCAT);
+        CopycatsCompat.registerFullBlock(SLIPPERY_COPYCAT);
+        CopycatsCompat.registerFullBlock(STICKY_COPYCAT);
+        CopycatsCompat.registerFullBlock(BOUNCY_COPYCAT);
+        CopycatsCompat.registerFullBlock(WEIGHTLESS_COPYCAT);
     }
 }

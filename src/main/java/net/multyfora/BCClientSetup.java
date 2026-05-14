@@ -37,10 +37,8 @@ public class BCClientSetup {
         for (DeferredBlock<? extends Block> deferred : COPYCAT_BLOCKS) {
             Block block = deferred.get();
             Function<BakedModel, BakedModel> modelFunc = BCCopycatFullModel::new;
-            if (CopycatsCompat.isLoaded()) {
-                Function<BakedModel, BakedModel> compatFunc = CopycatsCompat.getModelFunction(block);
-                if (compatFunc != null) modelFunc = compatFunc;
-            }
+            Function<BakedModel, BakedModel> compatFunc = CopycatsCompat.getModelFunction(block);
+            if (compatFunc != null) modelFunc = compatFunc;
 
             List<ModelResourceLocation> locations = new ArrayList<>();
             ResourceLocation blockRl = BuiltInRegistries.BLOCK.getKey(block);

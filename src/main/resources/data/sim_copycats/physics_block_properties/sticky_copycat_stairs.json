@@ -1,0 +1,6 @@
+{
+  "selector": "sim_copycats:sticky_copycat_stairs",
+  "properties": {
+    "sable:friction": 3.0
+  }
+}

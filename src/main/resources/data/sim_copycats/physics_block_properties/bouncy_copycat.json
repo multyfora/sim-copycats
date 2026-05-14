@@ -1,5 +1,5 @@
 {
-  "selector": "#sim_copycats:bouncy",
+  "selector": "sim_copycats:bouncy_copycat",
   "properties": {
     "sable:restitution": 0.65
   }

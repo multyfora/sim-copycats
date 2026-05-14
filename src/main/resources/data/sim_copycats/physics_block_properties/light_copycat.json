@@ -1,5 +1,5 @@
 {
-  "selector": "#sim_copycats:light",
+  "selector": "sim_copycats:light_copycat",
   "properties": {
     "sable:mass": 0.5
   }

@@ -1,0 +1,6 @@
+{
+  "selector": "sim_copycats:bouncy_copycat_slab",
+  "properties": {
+    "sable:restitution": 0.65
+  }
+}

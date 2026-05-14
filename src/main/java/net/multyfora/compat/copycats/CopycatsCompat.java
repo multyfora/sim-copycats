@@ -1,14 +1,13 @@
 package net.multyfora.compat.copycats;
 
 import com.copycatsplus.copycats.CCBlockEntityTypes;
+import com.copycatsplus.copycats.content.copycat.block.CopycatBlockBlock;
+import com.copycatsplus.copycats.content.copycat.block.CopycatBlockModelCore;
 import com.copycatsplus.copycats.content.copycat.slab.CopycatMultiSlabModelCore;
 import com.copycatsplus.copycats.content.copycat.slab.CopycatSlabBlock;
 import com.copycatsplus.copycats.content.copycat.stairs.CopycatStairsBlock;
 import com.copycatsplus.copycats.content.copycat.stairs.CopycatStairsModelCore;
 import com.copycatsplus.copycats.foundation.copycat.model.CopycatModelCore;
-
-import dev.eriksonn.aeronautics.content.components.Levitating;
-import dev.eriksonn.aeronautics.index.AeroDataComponents;
 
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.world.item.BlockItem;
@@ -16,10 +15,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.event.BlockEntityTypeAddBlocksEvent;
 import net.neoforged.neoforge.registries.DeferredBlock;
-import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.ArrayList;
@@ -28,22 +25,26 @@ import java.util.function.Function;
 
 public class CopycatsCompat {
 
+    private static final List<DeferredBlock<? extends Block>> COPYCAT_FULLS = new ArrayList<>();
     private static final List<DeferredBlock<? extends Block>> COPYCAT_SLABS = new ArrayList<>();
     private static final List<DeferredBlock<? extends Block>> COPYCAT_STAIRS = new ArrayList<>();
 
+    public static void registerFullBlock(DeferredBlock<? extends Block> block) {
+        COPYCAT_FULLS.add(block);
+    }
+
     public static List<DeferredBlock<? extends Block>> getCopycatBlocks() {
         List<DeferredBlock<? extends Block>> all = new ArrayList<>();
+        all.addAll(COPYCAT_FULLS);
         all.addAll(COPYCAT_SLABS);
         all.addAll(COPYCAT_STAIRS);
         return all;
     }
 
-    public static boolean isLoaded() {
-        return ModList.get().isLoaded("copycats");
-    }
-
     public static void onBlockEntityTypeAddBlocks(BlockEntityTypeAddBlocksEvent event) {
-        if (!isLoaded()) return;
+        for (var full : COPYCAT_FULLS) {
+            event.modify(CCBlockEntityTypes.COPYCAT.get(), full.get());
+        }
         for (var slab : COPYCAT_SLABS) {
             event.modify(CCBlockEntityTypes.MULTI_STATE_COPYCAT.get(), slab.get());
         }
@@ -53,8 +54,6 @@ public class CopycatsCompat {
     }
 
     public static void registerBlocks(DeferredRegister.Blocks blockRegister, DeferredRegister.Items itemRegister) {
-        // ======================== LEVITITE ========================
-
         registerSlabStairPair(blockRegister, itemRegister, "levitite_copycat_slab", "levitite_copycat_stairs",
                 CCLevititeSlab::new, CCLevititeStairs::new,
                 BlockBehaviour.Properties.of()
@@ -63,9 +62,7 @@ public class CopycatsCompat {
                         .noOcclusion()
                         .requiresCorrectToolForDrops()
                         .lightLevel(state -> 10),
-                props -> props.component(AeroDataComponents.LEVITATING, Levitating.LEVITITE));
-
-        // ======================== FRAGILE ========================
+                null);
 
         registerSlabStairPair(blockRegister, itemRegister, "fragile_copycat_slab", "fragile_copycat_stairs",
                 CopycatSlabBlock::new, CopycatStairsBlock::new,
@@ -75,8 +72,6 @@ public class CopycatsCompat {
                         .noOcclusion(),
                 null);
 
-        // ======================== SUPER LIGHT ========================
-
         registerSlabStairPair(blockRegister, itemRegister, "super_light_copycat_slab", "super_light_copycat_stairs",
                 CopycatSlabBlock::new, CopycatStairsBlock::new,
                 BlockBehaviour.Properties.of()
@@ -84,8 +79,6 @@ public class CopycatsCompat {
                         .sound(SoundType.WOOL)
                         .noOcclusion(),
                 null);
-
-        // ======================== LIGHT ========================
 
         registerSlabStairPair(blockRegister, itemRegister, "light_copycat_slab", "light_copycat_stairs",
                 CopycatSlabBlock::new, CopycatStairsBlock::new,
@@ -95,8 +88,6 @@ public class CopycatsCompat {
                         .noOcclusion(),
                 null);
 
-        // ======================== NORMAL ========================
-
         registerSlabStairPair(blockRegister, itemRegister, "normal_copycat_slab", "normal_copycat_stairs",
                 CopycatSlabBlock::new, CopycatStairsBlock::new,
                 BlockBehaviour.Properties.of()
@@ -104,8 +95,6 @@ public class CopycatsCompat {
                         .sound(SoundType.STONE)
                         .noOcclusion(),
                 null);
-
-        // ======================== HEAVY ========================
 
         registerSlabStairPair(blockRegister, itemRegister, "heavy_copycat_slab", "heavy_copycat_stairs",
                 CopycatSlabBlock::new, CopycatStairsBlock::new,
@@ -116,8 +105,6 @@ public class CopycatsCompat {
                         .requiresCorrectToolForDrops(),
                 null);
 
-        // ======================== SUPER HEAVY ========================
-
         registerSlabStairPair(blockRegister, itemRegister, "super_heavy_copycat_slab", "super_heavy_copycat_stairs",
                 CopycatSlabBlock::new, CopycatStairsBlock::new,
                 BlockBehaviour.Properties.of()
@@ -126,8 +113,6 @@ public class CopycatsCompat {
                         .noOcclusion()
                         .requiresCorrectToolForDrops(),
                 null);
-
-        // ======================== ABSURDLY HEAVY ========================
 
         registerSlabStairPair(blockRegister, itemRegister, "absurdly_heavy_copycat_slab", "absurdly_heavy_copycat_stairs",
                 CopycatSlabBlock::new, CopycatStairsBlock::new,
@@ -138,8 +123,6 @@ public class CopycatsCompat {
                         .requiresCorrectToolForDrops(),
                 null);
 
-        // ======================== SLIPPERY ========================
-
         registerSlabStairPair(blockRegister, itemRegister, "slippery_copycat_slab", "slippery_copycat_stairs",
                 CCSlipperySlab::new, CCSlipperyStairs::new,
                 BlockBehaviour.Properties.of()
@@ -148,8 +131,6 @@ public class CopycatsCompat {
                         .sound(SoundType.GLASS)
                         .noOcclusion(),
                 null);
-
-        // ======================== STICKY ========================
 
         registerSlabStairPair(blockRegister, itemRegister, "sticky_copycat_slab", "sticky_copycat_stairs",
                 CCStickySlab::new, CCStickyStairs::new,
@@ -160,8 +141,6 @@ public class CopycatsCompat {
                         .noOcclusion(),
                 null);
 
-        // ======================== BOUNCY ========================
-
         registerSlabStairPair(blockRegister, itemRegister, "bouncy_copycat_slab", "bouncy_copycat_stairs",
                 CCBouncySlab::new, CCBouncyStairs::new,
                 BlockBehaviour.Properties.of()
@@ -169,8 +148,6 @@ public class CopycatsCompat {
                         .sound(SoundType.SLIME_BLOCK)
                         .noOcclusion(),
                 null);
-
-        // ======================== WEIGHTLESS ========================
 
         registerSlabStairPair(blockRegister, itemRegister, "weightless_copycat_slab", "weightless_copycat_stairs",
                 CopycatSlabBlock::new, CopycatStairsBlock::new,
@@ -202,6 +179,8 @@ public class CopycatsCompat {
     }
 
     public static Function<BakedModel, BakedModel> getModelFunction(Block block) {
+        if (block instanceof CopycatBlockBlock)
+            return m -> CopycatModelCore.createModel(m, new CopycatBlockModelCore());
         if (block instanceof CopycatSlabBlock)
             return m -> CopycatModelCore.createModel(m, new CopycatMultiSlabModelCore());
         if (block instanceof CopycatStairsBlock)

@@ -111,7 +111,7 @@ side="BOTH"
 
 [[dependencies.${mod_id}]]
 modId="copycats"
-type="optional"
+type="required"
 ordering="AFTER"
 side="BOTH"
 

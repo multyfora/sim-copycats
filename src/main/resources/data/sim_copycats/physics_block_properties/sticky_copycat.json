@@ -1,5 +1,5 @@
 {
-  "selector": "#sim_copycats:sticky",
+  "selector": "sim_copycats:sticky_copycat",
   "properties": {
     "sable:friction": 3.0
   }

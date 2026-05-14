@@ -1,0 +1,6 @@
+{
+  "selector": "sim_copycats:weightless_copycat_slab",
+  "properties": {
+    "sable:mass": 0.0
+  }
+}

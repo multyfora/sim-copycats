@@ -1,0 +1,6 @@
+{
+  "selector": "sim_copycats:weightless_copycat_stairs",
+  "properties": {
+    "sable:mass": 0.0
+  }
+}
