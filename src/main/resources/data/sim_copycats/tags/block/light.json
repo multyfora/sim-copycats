@@ -1,5 +1,7 @@
 {
   "values": [
-    "sim_copycats:light_copycat"
+    "sim_copycats:light_copycat",
+    "sim_copycats:light_copycat_slab",
+    "sim_copycats:light_copycat_stairs"
   ]
 }

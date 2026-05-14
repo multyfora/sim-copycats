@@ -12,6 +12,8 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import net.multyfora.compat.copycats.CopycatsCompat;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,7 +23,8 @@ public class BCBlocks {
 
     public static final List<DeferredBlock<? extends Block>> ALL_COPYCATS = new ArrayList<>();
 
-    // --- Levitite Copycat ---
+    // ======================== LEVITITE ========================
+
     public static final DeferredBlock<LevititeCopycat> LEVITITE_COPYCAT = REGISTER.register("levitite_copycat",
             () -> {
                 LevititeCopycat block = new LevititeCopycat(BlockBehaviour.Properties.of()
@@ -38,7 +41,8 @@ public class BCBlocks {
             () -> new BlockItem(LEVITITE_COPYCAT.get(), new Item.Properties()
                     .component(AeroDataComponents.LEVITATING, Levitating.LEVITITE)));
 
-    // --- Fragile Copycat ---
+    // ======================== FRAGILE ========================
+
     public static final DeferredBlock<FragileCopycat> FRAGILE_COPYCAT = REGISTER.register("fragile_copycat",
             () -> {
                 FragileCopycat block = new FragileCopycat(BlockBehaviour.Properties.of()
@@ -52,7 +56,8 @@ public class BCBlocks {
     public static final DeferredItem<BlockItem> FRAGILE_COPYCAT_ITEM = ITEMS_REGISTER.register("fragile_copycat",
             () -> new BlockItem(FRAGILE_COPYCAT.get(), new Item.Properties()));
 
-    // --- Super Light Copycat ---
+    // ======================== SUPER LIGHT ========================
+
     public static final DeferredBlock<SuperLightCopycat> SUPER_LIGHT_COPYCAT = REGISTER.register("super_light_copycat",
             () -> {
                 SuperLightCopycat block = new SuperLightCopycat(BlockBehaviour.Properties.of()
@@ -66,7 +71,8 @@ public class BCBlocks {
     public static final DeferredItem<BlockItem> SUPER_LIGHT_COPYCAT_ITEM = ITEMS_REGISTER.register("super_light_copycat",
             () -> new BlockItem(SUPER_LIGHT_COPYCAT.get(), new Item.Properties()));
 
-    // --- Light Copycat ---
+    // ======================== LIGHT ========================
+
     public static final DeferredBlock<LightCopycat> LIGHT_COPYCAT = REGISTER.register("light_copycat",
             () -> {
                 LightCopycat block = new LightCopycat(BlockBehaviour.Properties.of()
@@ -80,7 +86,8 @@ public class BCBlocks {
     public static final DeferredItem<BlockItem> LIGHT_COPYCAT_ITEM = ITEMS_REGISTER.register("light_copycat",
             () -> new BlockItem(LIGHT_COPYCAT.get(), new Item.Properties()));
 
-    // --- Normal Copycat ---
+    // ======================== NORMAL ========================
+
     public static final DeferredBlock<NormalCopycat> NORMAL_COPYCAT = REGISTER.register("normal_copycat",
             () -> {
                 NormalCopycat block = new NormalCopycat(BlockBehaviour.Properties.of()
@@ -94,7 +101,8 @@ public class BCBlocks {
     public static final DeferredItem<BlockItem> NORMAL_COPYCAT_ITEM = ITEMS_REGISTER.register("normal_copycat",
             () -> new BlockItem(NORMAL_COPYCAT.get(), new Item.Properties()));
 
-    // --- Heavy Copycat ---
+    // ======================== HEAVY ========================
+
     public static final DeferredBlock<HeavyCopycat> HEAVY_COPYCAT = REGISTER.register("heavy_copycat",
             () -> {
                 HeavyCopycat block = new HeavyCopycat(BlockBehaviour.Properties.of()
@@ -109,7 +117,8 @@ public class BCBlocks {
     public static final DeferredItem<BlockItem> HEAVY_COPYCAT_ITEM = ITEMS_REGISTER.register("heavy_copycat",
             () -> new BlockItem(HEAVY_COPYCAT.get(), new Item.Properties()));
 
-    // --- Super Heavy Copycat ---
+    // ======================== SUPER HEAVY ========================
+
     public static final DeferredBlock<SuperHeavyCopycat> SUPER_HEAVY_COPYCAT = REGISTER.register("super_heavy_copycat",
             () -> {
                 SuperHeavyCopycat block = new SuperHeavyCopycat(BlockBehaviour.Properties.of()
@@ -124,7 +133,8 @@ public class BCBlocks {
     public static final DeferredItem<BlockItem> SUPER_HEAVY_COPYCAT_ITEM = ITEMS_REGISTER.register("super_heavy_copycat",
             () -> new BlockItem(SUPER_HEAVY_COPYCAT.get(), new Item.Properties()));
 
-    // --- Absurdly Heavy Copycat ---
+    // ======================== ABSURDLY HEAVY ========================
+
     public static final DeferredBlock<AbsurdlyHeavyCopycat> ABSURDLY_HEAVY_COPYCAT = REGISTER.register("absurdly_heavy_copycat",
             () -> {
                 AbsurdlyHeavyCopycat block = new AbsurdlyHeavyCopycat(BlockBehaviour.Properties.of()
@@ -139,7 +149,8 @@ public class BCBlocks {
     public static final DeferredItem<BlockItem> ABSURDLY_HEAVY_COPYCAT_ITEM = ITEMS_REGISTER.register("absurdly_heavy_copycat",
             () -> new BlockItem(ABSURDLY_HEAVY_COPYCAT.get(), new Item.Properties()));
 
-    // --- Slippery Copycat ---
+    // ======================== SLIPPERY ========================
+
     public static final DeferredBlock<SlipperyCopycat> SLIPPERY_COPYCAT = REGISTER.register("slippery_copycat",
             () -> {
                 SlipperyCopycat block = new SlipperyCopycat(BlockBehaviour.Properties.of()
@@ -154,7 +165,8 @@ public class BCBlocks {
     public static final DeferredItem<BlockItem> SLIPPERY_COPYCAT_ITEM = ITEMS_REGISTER.register("slippery_copycat",
             () -> new BlockItem(SLIPPERY_COPYCAT.get(), new Item.Properties()));
 
-    // --- Sticky Copycat ---
+    // ======================== STICKY ========================
+
     public static final DeferredBlock<StickyCopycat> STICKY_COPYCAT = REGISTER.register("sticky_copycat",
             () -> {
                 StickyCopycat block = new StickyCopycat(BlockBehaviour.Properties.of()
@@ -169,7 +181,8 @@ public class BCBlocks {
     public static final DeferredItem<BlockItem> STICKY_COPYCAT_ITEM = ITEMS_REGISTER.register("sticky_copycat",
             () -> new BlockItem(STICKY_COPYCAT.get(), new Item.Properties()));
 
-    // --- Bouncy Copycat ---
+    // ======================== BOUNCY ========================
+
     public static final DeferredBlock<BouncyCopycat> BOUNCY_COPYCAT = REGISTER.register("bouncy_copycat",
             () -> {
                 BouncyCopycat block = new BouncyCopycat(BlockBehaviour.Properties.of()
@@ -183,7 +196,8 @@ public class BCBlocks {
     public static final DeferredItem<BlockItem> BOUNCY_COPYCAT_ITEM = ITEMS_REGISTER.register("bouncy_copycat",
             () -> new BlockItem(BOUNCY_COPYCAT.get(), new Item.Properties()));
 
-    // --- Weightless Copycat ---
+    // ======================== WEIGHTLESS ========================
+
     public static final DeferredBlock<WeightlessCopycat> WEIGHTLESS_COPYCAT = REGISTER.register("weightless_copycat",
             () -> {
                 WeightlessCopycat block = new WeightlessCopycat(BlockBehaviour.Properties.of()
@@ -214,6 +228,13 @@ public class BCBlocks {
 
         for (DeferredBlock<? extends Block> copycat : ALL_COPYCATS) {
             BCClientSetup.registerCopycatBlock(copycat);
+        }
+
+        if (CopycatsCompat.isLoaded()) {
+            CopycatsCompat.registerBlocks(REGISTER, ITEMS_REGISTER);
+            for (DeferredBlock<? extends Block> copycat : CopycatsCompat.getCopycatBlocks()) {
+                BCClientSetup.registerCopycatBlock(copycat);
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "sim_copycats:block/copycat_placeholder"
+    "all": "create:block/copycat_base"
   }
 }

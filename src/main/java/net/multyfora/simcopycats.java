@@ -4,6 +4,8 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
+import net.multyfora.compat.copycats.CopycatsCompat;
+
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.BlockItem;
@@ -16,6 +18,9 @@ import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.loading.FMLEnvironment;
+import net.neoforged.neoforge.client.gui.ConfigurationScreen;
+import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -49,6 +54,11 @@ public class simcopycats {
                 output.accept(BCBlocks.STICKY_COPYCAT_ITEM.get());
                 output.accept(BCBlocks.BOUNCY_COPYCAT_ITEM.get());
                 output.accept(BCBlocks.WEIGHTLESS_COPYCAT_ITEM.get());
+                if (CopycatsCompat.isLoaded()) {
+                    for (var block : CopycatsCompat.getCopycatBlocks()) {
+                        output.accept(block.get().asItem());
+                    }
+                }
             }).build());
 
     public simcopycats(IEventBus modEventBus, ModContainer modContainer) {
@@ -59,5 +69,11 @@ public class simcopycats {
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
+
+        modEventBus.addListener(CopycatsCompat::onBlockEntityTypeAddBlocks);
+
+        if (FMLEnvironment.dist.isClient()) {
+            modContainer.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
+        }
     }
 }

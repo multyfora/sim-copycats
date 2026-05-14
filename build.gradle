@@ -35,6 +35,10 @@ repositories {
         name = "RyanHCode Maven"
         url = "https://maven.ryanhcode.dev/releases"
     }
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+    }
     flatDir {
         dirs 'libs'
     }
@@ -108,6 +112,9 @@ dependencies {
 
     implementation(":aeronautics-neoforge-1.21.1-1.2.1")
     localRuntime(":aeronautics-neoforge-1.21.1-1.2.1")
+
+    compileOnly("maven.modrinth:copycats:${copycats_version}")
+    localRuntime("maven.modrinth:copycats:${copycats_version}")
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {

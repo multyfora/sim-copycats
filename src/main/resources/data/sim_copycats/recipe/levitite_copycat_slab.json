@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "sim_copycats:levitite_copycat"
+  },
+  "result": {
+    "id": "sim_copycats:levitite_copycat_slab",
+    "count": 2
+  }
+}

@@ -1,5 +1,7 @@
 {
   "values": [
-    "sim_copycats:levitite_copycat"
+    "sim_copycats:levitite_copycat",
+    "sim_copycats:levitite_copycat_slab",
+    "sim_copycats:levitite_copycat_stairs"
   ]
 }

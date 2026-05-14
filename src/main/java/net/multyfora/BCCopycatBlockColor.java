@@ -1,5 +1,7 @@
 package net.multyfora;
 
+import com.simibubi.create.content.decoration.copycat.CopycatBlock;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.color.block.BlockColor;
 import net.minecraft.core.BlockPos;
@@ -14,7 +16,7 @@ public class BCCopycatBlockColor implements BlockColor {
     public int getColor(BlockState pState, @Nullable BlockAndTintGetter pLevel, @Nullable BlockPos pPos, int pTintIndex) {
         if (pLevel == null || pPos == null)
             return GrassColor.get(0.5D, 1.0D);
-        BlockState material = BCCopycatBlock.getMaterial(pLevel, pPos);
+        BlockState material = CopycatBlock.getMaterial(pLevel, pPos);
         return Minecraft.getInstance().getBlockColors().getColor(material, pLevel, pPos, pTintIndex);
     }
 }

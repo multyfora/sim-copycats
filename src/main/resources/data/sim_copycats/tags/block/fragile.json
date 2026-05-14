@@ -1,5 +1,7 @@
 {
   "values": [
-    "sim_copycats:fragile_copycat"
+    "sim_copycats:fragile_copycat",
+    "sim_copycats:fragile_copycat_slab",
+    "sim_copycats:fragile_copycat_stairs"
   ]
 }

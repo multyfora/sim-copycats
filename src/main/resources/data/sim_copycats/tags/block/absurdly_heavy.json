@@ -1,5 +1,7 @@
 {
   "values": [
-    "sim_copycats:absurdly_heavy_copycat"
+    "sim_copycats:absurdly_heavy_copycat",
+    "sim_copycats:absurdly_heavy_copycat_slab",
+    "sim_copycats:absurdly_heavy_copycat_stairs"
   ]
 }

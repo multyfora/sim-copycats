@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "sim_copycats:absurdly_heavy_copycat"
+  },
+  "result": {
+    "id": "sim_copycats:absurdly_heavy_copycat_slab",
+    "count": 2
+  }
+}

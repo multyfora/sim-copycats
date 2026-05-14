@@ -1,0 +1,19 @@
+package net.multyfora.compat.copycats;
+
+import com.copycatsplus.copycats.content.copycat.stairs.CopycatStairsBlock;
+
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.state.BlockState;
+
+public class CCStickyStairs extends CopycatStairsBlock {
+    public CCStickyStairs(Properties properties) {
+        super(properties);
+    }
+
+    @Override
+    public float getFriction(BlockState state, LevelReader level, BlockPos pos, Entity entity) {
+        return 0.8F;
+    }
+}

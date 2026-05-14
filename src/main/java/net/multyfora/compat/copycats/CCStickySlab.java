@@ -1,0 +1,19 @@
+package net.multyfora.compat.copycats;
+
+import com.copycatsplus.copycats.content.copycat.slab.CopycatSlabBlock;
+
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.state.BlockState;
+
+public class CCStickySlab extends CopycatSlabBlock {
+    public CCStickySlab(Properties properties) {
+        super(properties);
+    }
+
+    @Override
+    public float getFriction(BlockState state, LevelReader level, BlockPos pos, Entity entity) {
+        return 0.8F;
+    }
+}

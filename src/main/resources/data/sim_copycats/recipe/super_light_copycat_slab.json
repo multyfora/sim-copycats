@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "sim_copycats:super_light_copycat"
+  },
+  "result": {
+    "id": "sim_copycats:super_light_copycat_slab",
+    "count": 2
+  }
+}

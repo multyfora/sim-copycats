@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "sim_copycats:bouncy_copycat"
+  },
+  "result": {
+    "id": "sim_copycats:bouncy_copycat_stairs",
+    "count": 1
+  }
+}

@@ -1,5 +1,7 @@
 {
   "values": [
-    "sim_copycats:slippery_copycat"
+    "sim_copycats:slippery_copycat",
+    "sim_copycats:slippery_copycat_slab",
+    "sim_copycats:slippery_copycat_stairs"
   ]
 }

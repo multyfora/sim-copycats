@@ -1,5 +1,7 @@
 {
   "values": [
-    "sim_copycats:bouncy_copycat"
+    "sim_copycats:bouncy_copycat",
+    "sim_copycats:bouncy_copycat_slab",
+    "sim_copycats:bouncy_copycat_stairs"
   ]
 }

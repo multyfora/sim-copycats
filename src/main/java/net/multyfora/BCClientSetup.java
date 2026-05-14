@@ -1,5 +1,7 @@
 package net.multyfora;
 
+import net.multyfora.compat.copycats.CopycatsCompat;
+
 import net.minecraft.client.color.block.BlockColor;
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.client.resources.model.ModelResourceLocation;
@@ -34,7 +36,11 @@ public class BCClientSetup {
 
         for (DeferredBlock<? extends Block> deferred : COPYCAT_BLOCKS) {
             Block block = deferred.get();
-            Function<BakedModel, BakedModel> modelFunc = BCCopycatModel::new;
+            Function<BakedModel, BakedModel> modelFunc = BCCopycatFullModel::new;
+            if (CopycatsCompat.isLoaded()) {
+                Function<BakedModel, BakedModel> compatFunc = CopycatsCompat.getModelFunction(block);
+                if (compatFunc != null) modelFunc = compatFunc;
+            }
 
             List<ModelResourceLocation> locations = new ArrayList<>();
             ResourceLocation blockRl = BuiltInRegistries.BLOCK.getKey(block);
