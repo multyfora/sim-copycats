@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 
-@EventBusSubscriber(modid = simcopycats.MODID, value = Dist.CLIENT, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = simcopycats.MODID, value = Dist.CLIENT)
 public class BCClientSetup {
 
     private static final List<DeferredBlock<? extends Block>> COPYCAT_BLOCKS = new ArrayList<>();

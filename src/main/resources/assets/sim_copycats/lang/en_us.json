@@ -1,7 +1,5 @@
 {
   "itemGroup.sim_copycats": "Aeronautics: Simulated Copycats",
-  "block.sim_copycats.example_block": "Example Block",
-  "item.sim_copycats.example_item": "Example Item",
   "block.sim_copycats.levitite_copycat": "Levitite Copycat",
   "block.sim_copycats.levitite_copycat_slab": "Levitite Copycat Slab",
   "block.sim_copycats.levitite_copycat_stairs": "Levitite Copycat Stairs",
@@ -37,15 +35,5 @@
   "block.sim_copycats.bouncy_copycat_stairs": "Bouncy Copycat Stairs",
   "block.sim_copycats.weightless_copycat": "Weightless Copycat",
   "block.sim_copycats.weightless_copycat_slab": "Weightless Copycat Slab",
-  "block.sim_copycats.weightless_copycat_stairs": "Weightless Copycat Stairs",
-  "advancement.sim_copycats.levitite_copycat.title": "Now available in any shape and form!",
-  "advancement.sim_copycats.levitite_copycat.desc": "Craft a Levitite Copycat",
-
-  "sim_copycats.configuration.title": "Simulated Copycats Configs",
-  "sim_copycats.configuration.section.sim_copycats.common.toml": "Simulated Copycats Configs",
-  "sim_copycats.configuration.section.sim_copycats.common.toml.title": "Simulated Copycats Configs",
-  "sim_copycats.configuration.items": "Item List",
-  "sim_copycats.configuration.logDirtBlock": "Log Dirt Block",
-  "sim_copycats.configuration.magicNumberIntroduction": "Magic Number Text",
-  "sim_copycats.configuration.magicNumber": "Magic Number"
+  "block.sim_copycats.weightless_copycat_stairs": "Weightless Copycat Stairs"
 }

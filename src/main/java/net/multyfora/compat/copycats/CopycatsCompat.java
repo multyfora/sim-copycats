@@ -124,7 +124,7 @@ public class CopycatsCompat {
                 null);
 
         registerSlabStairPair(blockRegister, itemRegister, "slippery_copycat_slab", "slippery_copycat_stairs",
-                CCSlipperySlab::new, CCSlipperyStairs::new,
+                CopycatSlabBlock::new, CopycatStairsBlock::new,
                 BlockBehaviour.Properties.of()
                         .strength(1.0f, 2.0f)
                         .sound(SoundType.GLASS)

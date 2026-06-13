@@ -1,0 +1,16 @@
+{
+  "values": [
+    "sim_copycats:levitite_copycat",
+    "sim_copycats:levitite_copycat_slab",
+    "sim_copycats:levitite_copycat_stairs",
+    "sim_copycats:heavy_copycat",
+    "sim_copycats:heavy_copycat_slab",
+    "sim_copycats:heavy_copycat_stairs",
+    "sim_copycats:super_heavy_copycat",
+    "sim_copycats:super_heavy_copycat_slab",
+    "sim_copycats:super_heavy_copycat_stairs",
+    "sim_copycats:absurdly_heavy_copycat",
+    "sim_copycats:absurdly_heavy_copycat_slab",
+    "sim_copycats:absurdly_heavy_copycat_stairs"
+  ]
+}
