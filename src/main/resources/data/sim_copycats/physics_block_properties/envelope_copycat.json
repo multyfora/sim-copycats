@@ -1,0 +1,7 @@
+{
+  "selector": "sim_copycats:envelope_copycat",
+  "properties": {
+    "sable:floating_material": "aeronautics:simple_drag",
+    "sable:floating_scale": 0.33
+  }
+}

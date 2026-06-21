@@ -110,7 +110,7 @@ dependencies {
     implementation("dev.ryanhcode.sable:sable-neoforge-${minecraft_version}:${sable_version}")
     implementation("dev.ryanhcode.sable-companion:sable-companion-common-${minecraft_version}:${sable_companion_version}")
 
-    compileOnly(files("libs/aeronautics-neoforge-1.21.1-${aeronautics_version}.jar"))
+    compileOnly("dev.eriksonn.aeronautics:aeronautics-neoforge-1.21.1:${aeronautics_version}") { transitive = false }
     implementation("maven.modrinth:create-aeronautics:${aeronautics_version}+mc${minecraft_version}")
     localRuntime("maven.modrinth:create-aeronautics:${aeronautics_version}+mc${minecraft_version}")
 

@@ -129,6 +129,15 @@ public class BCBlocks {
     public static final DeferredItem<BlockItem> BOUNCY_COPYCAT_ITEM = ITEMS_REGISTER.register("bouncy_copycat",
             () -> new BlockItem(BOUNCY_COPYCAT.get(), new Item.Properties()));
 
+    public static final DeferredBlock<EnvelopeCopycat> ENVELOPE_COPYCAT = REGISTER.register("envelope_copycat",
+            () -> new EnvelopeCopycat(BlockBehaviour.Properties.of()
+                    .strength(1.0f, 2.0f)
+                    .sound(SoundType.WOOL)
+                    .noOcclusion()));
+
+    public static final DeferredItem<BlockItem> ENVELOPE_COPYCAT_ITEM = ITEMS_REGISTER.register("envelope_copycat",
+            () -> new BlockItem(ENVELOPE_COPYCAT.get(), new Item.Properties()));
+
     public static final DeferredBlock<BCCopycatBlock> WEIGHTLESS_COPYCAT = REGISTER.register("weightless_copycat",
             () -> new BCCopycatBlock(BlockBehaviour.Properties.of()
                     .strength(1.0f, 2.0f)
@@ -150,6 +159,7 @@ public class BCBlocks {
         ALL_COPYCATS.add(SLIPPERY_COPYCAT);
         ALL_COPYCATS.add(STICKY_COPYCAT);
         ALL_COPYCATS.add(BOUNCY_COPYCAT);
+        ALL_COPYCATS.add(ENVELOPE_COPYCAT);
         ALL_COPYCATS.add(WEIGHTLESS_COPYCAT);
 
         for (DeferredBlock<? extends Block> copycat : ALL_COPYCATS) {
@@ -172,6 +182,7 @@ public class BCBlocks {
         CopycatsCompat.registerFullBlock(SLIPPERY_COPYCAT);
         CopycatsCompat.registerFullBlock(STICKY_COPYCAT);
         CopycatsCompat.registerFullBlock(BOUNCY_COPYCAT);
+        CopycatsCompat.registerFullBlock(ENVELOPE_COPYCAT);
         CopycatsCompat.registerFullBlock(WEIGHTLESS_COPYCAT);
     }
 }

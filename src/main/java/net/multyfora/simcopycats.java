@@ -42,6 +42,7 @@ public class simcopycats {
                 output.accept(BCBlocks.STICKY_COPYCAT_ITEM.get());
                 output.accept(BCBlocks.BOUNCY_COPYCAT_ITEM.get());
                 output.accept(BCBlocks.WEIGHTLESS_COPYCAT_ITEM.get());
+                output.accept(BCBlocks.ENVELOPE_COPYCAT_ITEM.get());
                 for (var block : CopycatsCompat.getCopycatBlocks()) {
                     output.accept(block.get().asItem());
                 }
