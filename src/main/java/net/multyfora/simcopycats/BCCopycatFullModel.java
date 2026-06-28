@@ -1,4 +1,4 @@
-package net.multyfora;
+package net.multyfora.simcopycats;
 
 import java.util.Collections;
 import java.util.List;

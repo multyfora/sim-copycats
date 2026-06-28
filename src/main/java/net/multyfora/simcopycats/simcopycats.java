@@ -1,10 +1,9 @@
-package net.multyfora;
+package net.multyfora.simcopycats;
 
+import net.multyfora.simcopycats.compat.copycats.CopycatsCompat;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
-
-import net.multyfora.compat.copycats.CopycatsCompat;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;

@@ -1,14 +1,14 @@
-package net.multyfora.compat.copycats;
+package net.multyfora.simcopycats.compat.copycats;
 
-import com.copycatsplus.copycats.content.copycat.slab.CopycatSlabBlock;
+import com.copycatsplus.copycats.content.copycat.stairs.CopycatStairsBlock;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class CCStickySlab extends CopycatSlabBlock {
-    public CCStickySlab(Properties properties) {
+public class CCStickyStairs extends CopycatStairsBlock {
+    public CCStickyStairs(Properties properties) {
         super(properties);
     }
 

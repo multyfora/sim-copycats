@@ -1,4 +1,4 @@
-package net.multyfora.compat.copycats;
+package net.multyfora.simcopycats.compat.copycats;
 
 import com.copycatsplus.copycats.content.copycat.slab.CopycatSlabBlock;
 
@@ -6,7 +6,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
-import net.multyfora.ParticleHelper;
+import net.multyfora.simcopycats.ParticleHelper;
 
 public class CCLevititeSlab extends CopycatSlabBlock {
     public CCLevititeSlab(Properties properties) {
