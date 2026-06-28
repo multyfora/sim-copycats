@@ -1,4 +1,4 @@
-package net.multyfora.compat.copycats;
+package net.multyfora.simcopycats.compat.copycats;
 
 import com.copycatsplus.copycats.CCBlockEntityTypes;
 import com.copycatsplus.copycats.content.copycat.block.CopycatBlockBlock;

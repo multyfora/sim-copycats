@@ -1,4 +1,4 @@
-package net.multyfora;
+package net.multyfora.simcopycats;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;

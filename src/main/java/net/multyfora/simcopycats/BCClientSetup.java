@@ -1,6 +1,7 @@
-package net.multyfora;
+package net.multyfora.simcopycats;
 
-import net.multyfora.compat.copycats.CopycatsCompat;
+import net.multyfora.simcopycats.compat.copycats.CopycatsCompat;
+import net.multyfora.simcopycats.simcopycats.compat.copycats.CopycatsCompat;
 
 import net.minecraft.client.color.block.BlockColor;
 import net.minecraft.client.resources.model.BakedModel;

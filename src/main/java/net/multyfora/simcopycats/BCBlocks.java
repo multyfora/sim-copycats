@@ -1,4 +1,4 @@
-package net.multyfora;
+package net.multyfora.simcopycats;
 
 import dev.eriksonn.aeronautics.content.components.Levitating;
 import dev.eriksonn.aeronautics.index.AeroDataComponents;
@@ -7,12 +7,12 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.neoforged.fml.loading.FMLEnvironment;
+import net.multyfora.simcopycats.compat.copycats.CopycatsCompat;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-import net.multyfora.compat.copycats.CopycatsCompat;
+import net.multyfora.simcopycats.simcopycats.compat.copycats.CopycatsCompat;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,6 @@
-package net.multyfora;
+package net.multyfora.simcopycats.compat.copycats;
+
+import com.copycatsplus.copycats.content.copycat.slab.CopycatSlabBlock;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
@@ -8,8 +10,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 
-public class BouncyCopycat extends BCCopycatBlock {
-    public BouncyCopycat(Properties properties) {
+public class CCBouncySlab extends CopycatSlabBlock {
+    public CCBouncySlab(Properties properties) {
         super(properties);
     }
 

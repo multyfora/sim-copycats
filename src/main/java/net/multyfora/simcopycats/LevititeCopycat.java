@@ -1,15 +1,13 @@
-package net.multyfora.compat.copycats;
-
-import com.copycatsplus.copycats.content.copycat.stairs.CopycatStairsBlock;
+package net.multyfora.simcopycats;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
-import net.multyfora.ParticleHelper;
 
-public class CCLevititeStairs extends CopycatStairsBlock {
-    public CCLevititeStairs(Properties properties) {
+public class LevititeCopycat extends BCCopycatBlock {
+
+    public LevititeCopycat(Properties properties) {
         super(properties);
     }
 

@@ -1,4 +1,6 @@
-package net.multyfora;
+package net.multyfora.simcopycats.compat.copycats;
+
+import com.copycatsplus.copycats.content.copycat.stairs.CopycatStairsBlock;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
@@ -8,9 +10,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 
-public class EnvelopeCopycat extends BCCopycatBlock {
-
-    public EnvelopeCopycat(Properties properties) {
+public class CCBouncyStairs extends CopycatStairsBlock {
+    public CCBouncyStairs(Properties properties) {
         super(properties);
     }
 
@@ -30,8 +31,8 @@ public class EnvelopeCopycat extends BCCopycatBlock {
         } else {
             Vec3 vec3 = entity.getDeltaMovement();
             if (vec3.y < 0.0) {
-                double scale = 0.65 * (entity instanceof LivingEntity ? 1.0 : 0.8);
-                entity.setDeltaMovement(vec3.x, -vec3.y * scale, vec3.z);
+                double d0 = entity instanceof LivingEntity ? 1.0 : 0.8;
+                entity.setDeltaMovement(vec3.x, -vec3.y * d0, vec3.z);
             }
         }
     }

@@ -1,4 +1,4 @@
-package net.multyfora;
+package net.multyfora.simcopycats;
 
 import com.simibubi.create.content.decoration.copycat.CopycatBlock;
 

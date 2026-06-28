@@ -1,4 +1,4 @@
-package net.multyfora;
+package net.multyfora.simcopycats;
 
 import com.copycatsplus.copycats.content.copycat.block.CopycatBlockBlock;
 
